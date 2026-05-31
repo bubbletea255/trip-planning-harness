@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서울 1박 2일 가족 여행 리포트</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif; }
+    .nap-row { background-color: #dbeafe; }
+    .special-row { background-color: #fef9c3; }
+    .tab-btn.active { background-color: #1d4ed8; color: white; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    @media (max-width: 320px) {
+      table { font-size: 0.7rem; }
+      th, td { padding: 4px 3px; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+
+  <!-- 헤더 -->
+  <header class="bg-blue-700 text-white py-6 px-4 shadow-md">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-blue-200 text-sm mb-1">2026년 5월 31일 생성</p>
+      <h1 class="text-2xl font-bold">🗺️ 서울 1박 2일 가족 여행 리포트</h1>
+      <p class="text-blue-100 mt-1 text-sm">성인 2명 + 👶 27개월 아기 동반 여행</p>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-6 space-y-8">
+
+    <!-- ======================== -->
+    <!-- 섹션 1: 여행 개요 카드    -->
+    <!-- ======================== -->
+    <section>
+      <h2 class="text-lg font-bold text-slate-700 mb-3 flex items-center gap-2">
+        <span class="bg-blue-100 text-blue-700 rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">1</span>
+        여행 개요
+      </h2>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+        <!-- 배지 행 -->
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">📍 서울</span>
+          <span class="bg-slate-100 text-slate-700 text-xs font-semibold px-3 py-1 rounded-full">🗓️ 1박 2일</span>
+          <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">👨‍👩‍👧 성인 2 + 아기 1</span>
+          <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">💰 예산 여유</span>
+          <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">🍼 유모차 동선 우선</span>
+        </div>
+
+        <!-- 핵심 정보 그리드 -->
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div class="bg-blue-50 rounded-xl p-3 text-center">
+            <p class="text-xs text-slate-500 mb-1">총 예산</p>
+            <p class="text-base font-bold text-blue-700">500,000원</p>
+          </div>
+          <div class="bg-green-50 rounded-xl p-3 text-center">
+            <p class="text-xs text-slate-500 mb-1">예상 지출</p>
+            <p class="text-base font-bold text-green-700">443,300원</p>
+          </div>
+          <div class="bg-green-50 rounded-xl p-3 text-center">
+            <p class="text-xs text-slate-500 mb-1">예산 여유</p>
+            <p class="text-base font-bold text-green-600">▼ 56,700원</p>
+          </div>
+          <div class="bg-yellow-50 rounded-xl p-3 text-center">
+            <p class="text-xs text-slate-500 mb-1">일정 강도</p>
+            <p class="text-base font-bold text-yellow-700">여유롭게</p>
+          </div>
+        </div>
+
+        <!-- 숙소 / 이동 수단 -->
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-3">
+            <span class="text-2xl">🏨</span>
+            <div>
+              <p class="text-xs text-slate-500">추천 숙소</p>
+              <p class="text-sm font-semibold">호텔 나루 서울 엠갤러리</p>
+              <p class="text-xs text-slate-500">마포구 · 48개월 미만 조식 무료</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 rounded-xl p-3">
+            <span class="text-2xl">🚕</span>
+            <div>
+              <p class="text-xs text-slate-500">주요 이동 수단</p>
+              <p class="text-sm font-semibold">지하철 + 택시 병행</p>
+              <p class="text-xs text-slate-500">저녁 이동 구간 택시 강력 권장</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 특이사항 -->
+        <div class="mt-4 bg-yellow-50 border border-yellow-200 rounded-xl p-3">
+          <p class="text-xs font-bold text-yellow-700 mb-1">⭐ 특이사항</p>
+          <ul class="text-xs text-slate-700 space-y-1 list-disc list-inside">
+            <li>첫날 저녁 — 동작구 서울 현충원 근처에서 <strong>작은아빠 합류</strong> 외식 예정</li>
+            <li>오후 13:00~15:00 아기 낮잠 시간 → 오전 집중, 오후 휴식 패턴</li>
+            <li>27개월 아기: 지하철 무료 · 입장료 무료 · 조식 무료 전체 반영</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- 섹션 2: 날짜별 일정       -->
+    <!-- ======================== -->
+    <section>
+      <h2 class="text-lg font-bold text-slate-700 mb-3 flex items-center gap-2">
+        <span class="bg-blue-100 text-blue-700 rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">2</span>
+        날짜별 일정
+      </h2>
+
+      <!-- 탭 버튼 -->
+      <div class="flex gap-2 mb-4">
+        <button onclick="showTab('day1')" id="btn-day1"
+          class="tab-btn active flex-1 py-2 px-4 rounded-xl font-bold text-sm border border-blue-300 transition-colors">
+          Day 1 — 탐험하는 날
+        </button>
+        <button onclick="showTab('day2')" id="btn-day2"
+          class="tab-btn flex-1 py-2 px-4 rounded-xl font-bold text-sm border border-blue-300 bg-white text-blue-700 transition-colors">
+          Day 2 — 느긋하게 마무리
+        </button>
+      </div>
+
+      <!-- Day 1 -->
+      <div id="tab-day1" class="tab-content active">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-blue-700 text-white px-4 py-3">
+            <p class="font-bold">📅 Day 1 — 1일차: 아기와 함께 탐험하는 날</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm">
+              <thead class="bg-slate-100 text-slate-600">
+                <tr>
+                  <th class="text-left px-3 py-2 font-semibold whitespace-nowrap">시간</th>
+                  <th class="text-left px-3 py-2 font-semibold">활동</th>
+                  <th class="text-left px-3 py-2 font-semibold hidden sm:table-cell">장소</th>
+                  <th class="text-left px-3 py-2 font-semibold hidden sm:table-cell">이동</th>
+                  <th class="text-left px-3 py-2 font-semibold hidden md:table-cell">비고</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">09:00~10:00</td>
+                  <td class="px-3 py-2">출발 및 서울 이동</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">출발지 → 서울</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">자가용 또는 대중교통</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">어린이대공원역 목적지 기준</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">10:00~10:30</td>
+                  <td class="px-3 py-2">서울상상나라 도착, 짐 정리·수유·기저귀 교환</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">서울상상나라 (광진구)</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">도보 — 어린이대공원역 1번 출구 5분</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">유모차 1층 보관소 이용</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">10:30~13:00</td>
+                  <td class="px-3 py-2 font-semibold">서울상상나라 체험<br><span class="font-normal text-slate-500 text-xs">아기놀이터·감성·신체·상상놀이</span></td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">서울상상나라</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">성인 2명 × 4,000원 = 8,000원 / 아기 무료</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">13:00~13:30</td>
+                  <td class="px-3 py-2">한식 점심</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">광진구 능동 인근 한식당</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">도보 3~5분</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">아기 이유식 지참 / 1인당 8,000~13,000원</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">13:30~14:00</td>
+                  <td class="px-3 py-2">호텔로 이동</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">어린이대공원역 → 마포</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">지하철 7호선→5호선 또는 택시</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">아기 낮잠 전 호텔 도착 목표</td>
+                </tr>
+
+                <!-- 낮잠 강조 행 -->
+                <tr class="nap-row">
+                  <td class="px-3 py-2 whitespace-nowrap font-bold text-blue-800">14:00~15:30</td>
+                  <td class="px-3 py-2 font-bold text-blue-800">🍼 호텔 체크인 + 아기 낮잠<br><span class="text-blue-600 font-normal text-xs">핵심 휴식 구간</span></td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-blue-700">호텔 나루 서울 엠갤러리</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-blue-700">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-blue-700">오후 낮잠 시간 확보 핵심 구간</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">15:30~17:30</td>
+                  <td class="px-3 py-2">호텔 주변 산책 또는 카페 자유시간</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">마포·홍대 인근</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">도보</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">아기 컨디션에 따라 조정</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">17:30~18:00</td>
+                  <td class="px-3 py-2">저녁 식사 장소로 이동</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">마포 → 동작구 흑석동</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">🚕 택시 (카카오T) 강력 권장</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">동작역 유모차 환승 복잡 → 택시 10,000~15,000원</td>
+                </tr>
+
+                <!-- 특별 저녁 강조 행 -->
+                <tr class="special-row">
+                  <td class="px-3 py-2 whitespace-nowrap font-bold text-yellow-800">18:30~20:00</td>
+                  <td class="px-3 py-2 font-bold text-yellow-800">⭐ 특별 일정 — 가족 저녁 외식<br><span class="font-normal text-xs text-yellow-700">작은아빠 합류 · 현충원 근처</span></td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-yellow-700">수미락 (흑석동) 또는 이수생삼겹살</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-yellow-700">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-yellow-700">4인 + 아기 기준 예약 필수 / 72,000~88,000원</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">20:00~20:30</td>
+                  <td class="px-3 py-2">숙소 복귀</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">흑석동/이수역 → 마포 호텔</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">🚕 택시</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">약 10,000~15,000원</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">20:30~</td>
+                  <td class="px-3 py-2">아기 목욕·취침 준비, 숙소 휴식</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">호텔 나루</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">아기 취침 우선</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!-- 모바일 범례 -->
+          <div class="sm:hidden px-4 py-2 text-xs text-slate-400">* 장소·이동·비고는 가로 스크롤로 확인하거나 화면을 가로로 전환하세요.</div>
+          <!-- 낮잠/특별 범례 -->
+          <div class="flex flex-wrap gap-3 px-4 py-3 border-t border-slate-100 text-xs">
+            <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded bg-blue-200"></span> 아기 낮잠 시간</span>
+            <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded bg-yellow-200"></span> 특별 일정 (작은아빠 합류)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div id="tab-day2" class="tab-content">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-blue-600 text-white px-4 py-3">
+            <p class="font-bold">📅 Day 2 — 2일차: 아기와 느긋하게 마무리하는 날</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs sm:text-sm">
+              <thead class="bg-slate-100 text-slate-600">
+                <tr>
+                  <th class="text-left px-3 py-2 font-semibold whitespace-nowrap">시간</th>
+                  <th class="text-left px-3 py-2 font-semibold">활동</th>
+                  <th class="text-left px-3 py-2 font-semibold hidden sm:table-cell">장소</th>
+                  <th class="text-left px-3 py-2 font-semibold hidden sm:table-cell">이동</th>
+                  <th class="text-left px-3 py-2 font-semibold hidden md:table-cell">비고</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">08:00~09:00</td>
+                  <td class="px-3 py-2 font-semibold">호텔 조식<br><span class="font-normal text-slate-500 text-xs">아기 조식 무료</span></td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">호텔 나루 레스토랑</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">48개월 미만 무료 / 성인 2인 약 70,000원</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">09:00~09:30</td>
+                  <td class="px-3 py-2">체크아웃 준비, 짐 정리</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">호텔 나루</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">짐은 프런트 보관 후 출발 가능</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">09:30~10:00</td>
+                  <td class="px-3 py-2">국립중앙박물관 어린이박물관 이동</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">마포(공덕역) → 이촌역</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">지하철 5호선→4호선 (엘리베이터 경로)</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">사전 온라인 예약 필수 / 수유실·유모차 대여 있음</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">10:00~12:00</td>
+                  <td class="px-3 py-2 font-semibold">국립중앙박물관 어린이박물관 체험<br><span class="font-normal text-slate-500 text-xs">데굴데굴놀이터 포함 (36개월 이하 전용)</span></td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">국립중앙박물관 어린이박물관 (이촌역)</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">—</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">입장 무료 / 27개월 최적 연령대</td>
+                </tr>
+
+                <tr class="hover:bg-slate-50">
+                  <td class="px-3 py-2 whitespace-nowrap font-medium text-blue-700">12:00~12:30</td>
+                  <td class="px-3 py-2">이촌동 한식 점심</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-slate-500">이촌역 도보 5분 한식 백반</td>
+                  <td class="px-3 py-2 hidden sm:table-cell">도보</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-slate-500">1인당 8,000~12,000원 / 소프트 메뉴 활용</td>
+                </tr>
+
+                <!-- 귀가 낮잠 구간 -->
+                <tr class="nap-row">
+                  <td class="px-3 py-2 whitespace-nowrap font-bold text-blue-800">12:30~13:30</td>
+                  <td class="px-3 py-2 font-bold text-blue-800">🍼 짐 수령 후 귀가 출발<br><span class="font-normal text-blue-600 text-xs">차 안에서 아기 낮잠 가능</span></td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-blue-700">이촌역 → 마포 호텔 → 출발지</td>
+                  <td class="px-3 py-2 hidden sm:table-cell text-blue-700">지하철 또는 택시 (짐 있으면 택시 권장)</td>
+                  <td class="px-3 py-2 hidden md:table-cell text-blue-700">낮잠 전 귀가 차량 탑승 목표</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="sm:hidden px-4 py-2 text-xs text-slate-400">* 장소·이동·비고는 가로 스크롤로 확인하세요.</div>
+          <div class="flex flex-wrap gap-3 px-4 py-3 border-t border-slate-100 text-xs">
+            <span class="flex items-center gap-1"><span class="inline-block w-3 h-3 rounded bg-blue-200"></span> 아기 낮잠 시간</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 대안 일정 아코디언 -->
+      <div class="mt-3 bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <button onclick="toggleAlt()" class="w-full flex justify-between items-center px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50">
+          <span>🔄 대안 일정 보기 (비/컨디션 불량/예약 실패)</span>
+          <span id="alt-icon" class="text-slate-400">▼</span>
+        </button>
+        <div id="alt-content" class="hidden px-4 pb-4">
+          <div class="space-y-3 text-xs text-slate-700">
+            <div class="bg-blue-50 rounded-xl p-3">
+              <p class="font-bold text-blue-700 mb-1">🌧️ 비 오는 날</p>
+              <p>서울상상나라·어린이박물관 모두 실내 시설 — 우천 무관하게 정상 진행. 추가 대안: 동작구 서울형 키즈카페(대방동·상도동), 우리동네키움포털 예약, 아동 2,000~5,000원.</p>
+            </div>
+            <div class="bg-yellow-50 rounded-xl p-3">
+              <p class="font-bold text-yellow-700 mb-1">😢 아기 컨디션 나쁜 날</p>
+              <p>체험 시간 단축 → 점심 후 즉시 호텔 체크인 → 낮잠 충분히 확보. 저녁 외식 대신 배달·테이크아웃 전환. 2일차: 박물관 취소 후 홍대 산책 대체 → 일찍 귀가.</p>
+            </div>
+            <div class="bg-slate-50 rounded-xl p-3">
+              <p class="font-bold text-slate-600 mb-1">📵 서울상상나라 예약 실패 시</p>
+              <p>서울어린이대공원 (동일 역, 무료 입장·야외 동물원 10:00~17:00, 유모차 대여 3,000원) 또는 국립민속박물관 어린이박물관 (경복궁역, 사전예약 필수·무료) 으로 대체.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- 섹션 3: 예산 테이블        -->
+    <!-- ======================== -->
+    <section>
+      <h2 class="text-lg font-bold text-slate-700 mb-3 flex items-center gap-2">
+        <span class="bg-blue-100 text-blue-700 rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">3</span>
+        💰 예산 분석
+      </h2>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <!-- 예산 상태 배너 -->
+        <div class="bg-green-600 text-white px-4 py-3 flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <p class="font-bold text-base">예산 여유 상태 ✅</p>
+            <p class="text-green-100 text-xs">총 예산 500,000원 중 443,300원 사용 예정</p>
+          </div>
+          <div class="bg-green-700 rounded-xl px-4 py-2 text-center">
+            <p class="text-xs text-green-200">여유</p>
+            <p class="text-xl font-bold">56,700원</p>
+          </div>
+        </div>
+
+        <!-- 예산 테이블 -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs sm:text-sm">
+            <thead class="bg-slate-100 text-slate-600">
+              <tr>
+                <th class="text-left px-3 py-2 font-semibold">카테고리</th>
+                <th class="text-left px-3 py-2 font-semibold">항목</th>
+                <th class="text-right px-3 py-2 font-semibold whitespace-nowrap">금액</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded-full">🏨 숙박</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">호텔 나루 서울 엠갤러리 1박 (영아 추가요금 없음)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">190,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2 py-0.5 rounded-full">🍽️ 식사</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">1일차 점심 — 광진구 한식 (성인 2인, 아기 이유식 지참)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">20,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50 bg-yellow-50">
+                <td class="px-3 py-2">
+                  <span class="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2 py-0.5 rounded-full">🍽️ 식사</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">
+                  1일차 저녁 — 수미락 또는 이수생삼겹살
+                  <span class="text-yellow-700 font-semibold">(본인 가족 3인 기준)</span>
+                  <br><span class="text-yellow-600 text-xs">⭐ 작은아빠 합류 · 현충원 근처</span>
+                </td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">60,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2 py-0.5 rounded-full">🍽️ 식사</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">2일차 조식 — 호텔 레스토랑 (아기 무료, 성인 2인)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">70,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2 py-0.5 rounded-full">🍽️ 식사</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">2일차 점심 — 이촌동 한식 (성인 2인, 아기 소프트 메뉴)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">20,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full">🎡 관광</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">서울상상나라 입장료 (성인 2인, 아기 무료)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">8,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full">🎡 관광</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">국립중앙박물관 어린이박물관 (전체 무료)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap text-green-600">0원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-slate-100 text-slate-600 text-xs font-semibold px-2 py-0.5 rounded-full">🚇 교통</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">지하철 — 성인 2인 × 3회 (아기 무료)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">9,000원</td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-slate-100 text-slate-600 text-xs font-semibold px-2 py-0.5 rounded-full">🚕 교통</span>
+                </td>
+                <td class="px-3 py-2 text-slate-700">택시 — 마포→흑석동 (저녁 왕복 2회)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">26,000원</td>
+              </tr>
+
+              <!-- 소계 -->
+              <tr class="bg-slate-100">
+                <td colspan="2" class="px-3 py-2 font-bold text-slate-700 text-right">소계</td>
+                <td class="px-3 py-2 text-right font-bold whitespace-nowrap">403,000원</td>
+              </tr>
+
+              <!-- 예비비 -->
+              <tr class="bg-slate-50">
+                <td class="px-3 py-2">
+                  <span class="bg-orange-100 text-orange-700 text-xs font-semibold px-2 py-0.5 rounded-full">🛡️ 예비비</span>
+                </td>
+                <td class="px-3 py-2 text-slate-600 text-xs">소계의 10% — 돌발 지출(아기 용품 현장 구매, 카페 음료, 주차비 등)</td>
+                <td class="px-3 py-2 text-right font-semibold whitespace-nowrap">40,300원</td>
+              </tr>
+
+              <!-- 합계 -->
+              <tr class="bg-green-50 border-t-2 border-green-300">
+                <td colspan="2" class="px-3 py-3 font-bold text-green-800 text-right">합계 (예비비 포함)</td>
+                <td class="px-3 py-3 text-right font-bold text-green-700 text-base whitespace-nowrap">443,300원</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 예산 대비 시각화 -->
+        <div class="px-4 py-3 border-t border-slate-100">
+          <div class="flex justify-between text-xs text-slate-500 mb-1">
+            <span>사용 예정 443,300원</span>
+            <span>총 예산 500,000원</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden">
+            <div class="bg-green-500 h-4 rounded-full flex items-center justify-end pr-2" style="width: 88.7%">
+              <span class="text-white text-xs font-bold">88.7%</span>
+            </div>
+          </div>
+          <p class="text-xs text-green-600 font-semibold mt-1 text-right">여유 56,700원 (11.3%)</p>
+        </div>
+
+        <!-- 작은아빠 참여 시 추가 안내 -->
+        <div class="mx-4 mb-4 bg-yellow-50 border border-yellow-200 rounded-xl p-3">
+          <p class="text-xs font-bold text-yellow-700 mb-1">⭐ 작은아빠 포함 4인 저녁 시 추가 금액 안내</p>
+          <div class="text-xs text-slate-700 space-y-1">
+            <p>- 3인 기준 저녁: 60,000원 → <strong>4인 기준: 약 80,000원</strong> (1인분 약 20,000원 추가)</p>
+            <p>- 예비비 포함 총 추정액: 약 <strong>463,300원</strong> (여전히 예산 500,000원 이내)</p>
+            <p>- 작은아빠 식사비를 각자 부담 처리하면 본 예산에 영향 없음</p>
+            <p>- 수미락(동작구 흑석동): 네이버 지도 또는 전화 <strong>사전 예약 필수</strong></p>
+          </div>
+        </div>
+
+        <!-- 주의사항 -->
+        <div class="mx-4 mb-4 bg-slate-50 border border-slate-200 rounded-xl p-3">
+          <p class="text-xs font-bold text-slate-600 mb-1">⚠️ 주의사항</p>
+          <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+            <li>숙박비: 요일·성수기에 따라 160,000~220,000원 변동 가능 (±60,000원)</li>
+            <li>조식 요금: 현장 30,000~40,000원 범위 — 예약 시 확인 필수</li>
+            <li>자가용 이용 시 호텔 주차비 10,000~20,000원 별도 발생 가능</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- 섹션 4: 준비 체크리스트   -->
+    <!-- ======================== -->
+    <section>
+      <h2 class="text-lg font-bold text-slate-700 mb-3 flex items-center gap-2">
+        <span class="bg-blue-100 text-blue-700 rounded-full w-7 h-7 flex items-center justify-center text-sm font-bold">4</span>
+        ✅ 준비 체크리스트
+      </h2>
+
+      <div class="space-y-4">
+
+        <!-- 출발 전 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-blue-600 text-white px-4 py-3">
+            <p class="font-bold text-sm">✈️ 출발 전</p>
+          </div>
+          <ul class="divide-y divide-slate-100 text-sm">
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span><span class="font-semibold text-red-600">[필수]</span> 서울상상나라 온라인 사전 예약 완료 — 최소 1~2일 전, 현장 매진 빈번</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span><span class="font-semibold text-red-600">[필수]</span> 국립중앙박물관 어린이박물관 온라인 예약 완료 — 무료지만 회차별 인원 제한</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span><span class="font-semibold text-red-600">[필수]</span> 수미락(흑석동) 또는 이수생삼겹살 저녁 식사 예약 — 4인+아기 기준, 네이버 지도 또는 전화</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>숙소 예약 확인 — 호텔 나루 서울 엠갤러리, 유아침대(크리브) 요청 여부 확인</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>🍼 아기 상비약 챙기기 — 해열제, 소화제, 파스/밴드, 체온계</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>아기 건강보험카드 지참 (여권 대신) + 아동 등록 확인</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>유모차 점검 — 배터리·바퀴·안전벨트, 지하철 접이 가능 여부 확인</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>아기 간식 및 이유식 충분히 준비 — 점심·저녁용 이유식 별도 보냉 가방</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>기저귀·물티슈·여벌 옷 충분히 준비 (1박 2일 기준 기저귀 10~15개 권장)</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>환전 또는 카카오페이·네이버페이 충전 확인</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>필수 앱 설치 — 카카오T(택시), 네이버지도, 카카오맵, 호텔 앱</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-blue-600 flex-shrink-0" />
+              <span>여행자보험 가입 여부 확인 (영아 포함)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 현지에서 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-green-600 text-white px-4 py-3">
+            <p class="font-bold text-sm">📍 현지에서</p>
+          </div>
+          <ul class="divide-y divide-slate-100 text-sm">
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>서울상상나라 — 1층 수유실·기저귀 교환실 위치 사전 확인</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>국립중앙박물관 어린이박물관 — 수유실·유모차 대여 위치 확인 (현장 대여 있음)</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>지하철 이용 시 유모차 접기 가능 여부 확인 — 엘리베이터 경로 미리 확인 (서울 지하철 앱)</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>저녁 이동 전 택시 카카오T 앱 실행 확인 — 마포에서 흑석동까지 약 20~30분</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>예약 식당(수미락 등) 리마인더 — 출발 전 30분 확인 전화 또는 앱 확인</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>🍼 비상 간식 상시 준비 — 아기 칭얼거림 대비, 허니버터칩·뻥튀기·과일 파우치 등</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>호텔 체크인 시 유아침대(크리브) 요청 확인 — 미리 연락하면 설치 보장</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-green-600 flex-shrink-0" />
+              <span>2일차 아침 체크아웃 전 짐 프런트 보관 요청 — 박물관 방문 후 수령 가능</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 귀국 후 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="bg-slate-600 text-white px-4 py-3">
+            <p class="font-bold text-sm">🏠 귀가 후</p>
+          </div>
+          <ul class="divide-y divide-slate-100 text-sm">
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-slate-600 flex-shrink-0" />
+              <span>지출 정산 — 실제 지출 vs 예상 예산 비교 (카드 내역 확인)</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-slate-600 flex-shrink-0" />
+              <span>👶 아기 반응 메모 — 서울상상나라·어린이박물관 중 어떤 곳을 더 좋아했는지 기록</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-slate-600 flex-shrink-0" />
+              <span>다음 여행을 위한 아기 동선 메모 — 낮잠 시간 패턴, 좋았던 장소/불편했던 구간</span>
+            </li>
+            <li class="flex items-start gap-3 px-4 py-3">
+              <input type="checkbox" class="mt-0.5 w-4 h-4 accent-slate-600 flex-shrink-0" />
+              <span>아기 용품 보충 — 기저귀·물티슈·상비약 소진분 재구매</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="bg-slate-800 text-slate-400 text-xs text-center py-4 mt-8">
+    <p>서울 1박 2일 가족 여행 리포트 · 생성일: 2026-05-31</p>
+    <p class="mt-1">run-20260531-seoul · 05-report.html</p>
+  </footer>
+
+  <script>
+    function showTab(day) {
+      document.getElementById('tab-day1').classList.remove('active');
+      document.getElementById('tab-day2').classList.remove('active');
+      document.getElementById('btn-day1').classList.remove('active');
+      document.getElementById('btn-day2').classList.remove('active');
+
+      document.getElementById('tab-' + day).classList.add('active');
+      document.getElementById('btn-' + day).classList.add('active');
+
+      if (day === 'day1') {
+        document.getElementById('btn-day1').style.backgroundColor = '#1d4ed8';
+        document.getElementById('btn-day1').style.color = 'white';
+        document.getElementById('btn-day2').style.backgroundColor = 'white';
+        document.getElementById('btn-day2').style.color = '#1d4ed8';
+      } else {
+        document.getElementById('btn-day2').style.backgroundColor = '#1d4ed8';
+        document.getElementById('btn-day2').style.color = 'white';
+        document.getElementById('btn-day1').style.backgroundColor = 'white';
+        document.getElementById('btn-day1').style.color = '#1d4ed8';
+      }
+    }
+
+    function toggleAlt() {
+      const content = document.getElementById('alt-content');
+      const icon = document.getElementById('alt-icon');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.textContent = '▲';
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '▼';
+      }
+    }
+
+    // 초기 탭 버튼 스타일 설정
+    document.getElementById('btn-day1').style.backgroundColor = '#1d4ed8';
+    document.getElementById('btn-day1').style.color = 'white';
+    document.getElementById('btn-day2').style.backgroundColor = 'white';
+    document.getElementById('btn-day2').style.color = '#1d4ed8';
+  </script>
+
+</body>
+</html>
