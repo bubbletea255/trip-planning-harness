@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서울 1박 2일 가족 여행 계획 v2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    [x-cloak] { display: none; }
+    .tab-active { border-bottom: 3px solid #0d9488; color: #0d9488; font-weight: 700; }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800 min-h-screen">
+
+  <main class="mx-auto max-w-4xl px-4 py-8">
+
+    <!-- ① 여행 개요 카드 -->
+    <section class="mb-8">
+      <p class="text-sm font-semibold text-teal-700 tracking-wide uppercase">2026 서울 가족 여행</p>
+      <h1 class="mt-1 text-3xl font-bold tracking-tight">서울 1박 2일 — 아기와 함께</h1>
+      <p class="mt-2 text-slate-500">성인 2명 + 27개월 아기 · 첫날 저녁 현충원 근처 가족 외식</p>
+
+      <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <p class="text-xs text-slate-400 uppercase tracking-wide">여행 기간</p>
+          <p class="mt-1 text-xl font-bold">1박 2일</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <p class="text-xs text-slate-400 uppercase tracking-wide">인원</p>
+          <p class="mt-1 text-xl font-bold">성인 2 + 아기</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <p class="text-xs text-slate-400 uppercase tracking-wide">추정 총액</p>
+          <p class="mt-1 text-xl font-bold text-green-600">428,800원</p>
+          <p class="text-xs text-slate-400">예산 대비 -71,200원</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <p class="text-xs text-slate-400 uppercase tracking-wide">추천 숙소</p>
+          <p class="mt-1 text-lg font-bold leading-tight">나인트리<br>용산</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② 날짜별 일정 탭 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-4">날짜별 일정</h2>
+
+      <div class="flex border-b border-slate-200 mb-4 gap-4">
+        <button id="tab1-btn" onclick="showTab('tab1')" class="pb-2 text-sm tab-active">Day 1 — 체험·공원·가족 저녁</button>
+        <button id="tab2-btn" onclick="showTab('tab2')" class="pb-2 text-sm text-slate-400 border-b-2 border-transparent">Day 2 — 박물관·귀환</button>
+      </div>
+
+      <!-- Day 1 -->
+      <div id="tab1" class="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-teal-50 text-teal-800">
+              <tr>
+                <th class="p-3 whitespace-nowrap">시간</th>
+                <th class="p-3">활동</th>
+                <th class="p-3">장소</th>
+                <th class="p-3">비고</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">10:30</td><td class="p-3 font-medium">도착·짐 보관</td><td class="p-3">나인트리 용산</td><td class="p-3 text-slate-500">체크인 전 짐 맡기기</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">11:00</td><td class="p-3 font-medium">🚕 택시 이동</td><td class="p-3">용산 → 상상나라</td><td class="p-3 text-slate-500">약 30분, 20,000원</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">11:30</td><td class="p-3 font-medium">서울상상나라 체험</td><td class="p-3">서울상상나라</td><td class="p-3 text-slate-500">성인 8,000원 · <span class="text-green-600 font-semibold">아기 무료</span> · 2시간</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">13:30</td><td class="p-3 font-medium">점심 식사</td><td class="p-3">어린이대공원 인근</td><td class="p-3 text-slate-500">가족식당, 아기의자 확인</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">14:30</td><td class="p-3 font-medium">어린이대공원 산책</td><td class="p-3">서울어린이대공원</td><td class="p-3 text-slate-500">무료 · 유모차 이동 가능 · 우천 시 생략</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">15:30</td><td class="p-3 font-medium">🚕 택시 귀환</td><td class="p-3">상상나라 → 용산 숙소</td><td class="p-3 text-slate-500">약 30분, 20,000원</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">16:00</td><td class="p-3 font-medium">숙소 체크인·아기 낮잠</td><td class="p-3">나인트리 용산</td><td class="p-3 text-slate-500">저녁 전 필수 휴식</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">18:00</td><td class="p-3 font-medium">🚕 저녁 이동</td><td class="p-3">용산 → 사당역</td><td class="p-3 text-slate-500">약 15분, 12,000원</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">18:30</td><td class="p-3 font-medium">저녁 식사</td><td class="p-3">담양에초대 사당역점</td><td class="p-3 text-slate-500">작은아빠 합류 · 개별룸 · 4인 약 88,000원</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">20:00</td><td class="p-3 font-medium">🚕 귀환</td><td class="p-3">사당역 → 용산 숙소</td><td class="p-3 text-slate-500">심야 할증 전 귀환 (22시 이전)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="px-4 py-2 bg-teal-50 text-teal-700 text-xs font-medium">당일 이동 시간 합계: 약 1.5시간 (택시 중심)</div>
+      </div>
+
+      <!-- Day 2 -->
+      <div id="tab2" class="hidden rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-teal-50 text-teal-800">
+              <tr>
+                <th class="p-3 whitespace-nowrap">시간</th>
+                <th class="p-3">활동</th>
+                <th class="p-3">장소</th>
+                <th class="p-3">비고</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">08:30</td><td class="p-3 font-medium">기상·아침 식사</td><td class="p-3">숙소 또는 근처 카페</td><td class="p-3 text-slate-500">아기 식사 여유롭게</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">09:30</td><td class="p-3 font-medium">🚇 지하철 이동</td><td class="p-3">용산 → 이촌역</td><td class="p-3 text-slate-500">직통 15분 · 1,400원×2 · 엘리베이터 완비</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">10:00</td><td class="p-3 font-medium">어린이박물관 관람</td><td class="p-3">국립중앙박물관</td><td class="p-3 text-slate-500"><span class="text-green-600 font-semibold">전원 무료</span> · 14일 전 예약 필수 · 1.5시간</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">11:30</td><td class="p-3 font-medium">박물관 정원 산책</td><td class="p-3">국립중앙박물관 야외</td><td class="p-3 text-slate-500">유모차 산책 · 컨디션 따라 생략 가능</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">12:00</td><td class="p-3 font-medium">점심 식사</td><td class="p-3">박물관 내 식당</td><td class="p-3 text-slate-500">유아의자 비치 · 유모차 이동 편리</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 whitespace-nowrap text-slate-400">13:00</td><td class="p-3 font-medium">체크아웃·짐 수령</td><td class="p-3">나인트리 용산</td><td class="p-3 text-slate-500">지하철 귀환 후 수령</td></tr>
+              <tr><td class="p-3 whitespace-nowrap text-slate-400">13:30</td><td class="p-3 font-medium">귀가 출발</td><td class="p-3">용산역/서울역</td><td class="p-3 text-slate-500">아기 낮잠 전 출발 목표</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="px-4 py-2 bg-teal-50 text-teal-700 text-xs font-medium">당일 이동 시간 합계: 약 45분 (지하철 중심)</div>
+      </div>
+    </section>
+
+    <!-- ③ 예산 테이블 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-4">예산 분석</h2>
+      <div class="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-100 text-slate-600">
+              <tr>
+                <th class="p-3">카테고리</th>
+                <th class="p-3">항목</th>
+                <th class="p-3 text-right">소계</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="p-3 text-slate-400">숙박</td><td class="p-3">나인트리 용산 1박</td><td class="p-3 text-right font-medium">220,000원</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 text-slate-400" rowspan="4">식사</td><td class="p-3">1일차 점심 (3인)</td><td class="p-3 text-right">30,000원</td></tr>
+              <tr class="bg-slate-50"><td class="p-3">1일차 저녁 담양에초대 (4인)</td><td class="p-3 text-right">88,000원</td></tr>
+              <tr class="bg-slate-50"><td class="p-3">2일차 아침 (2인)</td><td class="p-3 text-right">16,000원</td></tr>
+              <tr class="bg-slate-50"><td class="p-3">2일차 점심 박물관 (2인)</td><td class="p-3 text-right">24,000원</td></tr>
+              <tr><td class="p-3 text-slate-400" rowspan="3">교통</td><td class="p-3">택시 4회 (용산↔상상나라, 저녁 왕복)</td><td class="p-3 text-right">64,000원</td></tr>
+              <tr><td class="p-3">지하철 2회×2인</td><td class="p-3 text-right">5,600원</td></tr>
+              <tr><td class="p-3">교통 소계</td><td class="p-3 text-right font-medium">69,600원</td></tr>
+              <tr class="bg-slate-50"><td class="p-3 text-slate-400">관광</td><td class="p-3">서울상상나라 성인 2명 (아기·박물관 무료)</td><td class="p-3 text-right">8,000원</td></tr>
+              <tr><td class="p-3 text-slate-400">기타</td><td class="p-3">아기 간식·음료·기저귀</td><td class="p-3 text-right">15,000원</td></tr>
+              <tr><td class="p-3 text-slate-400">예비비 (10%)</td><td class="p-3 text-slate-400 text-xs">돌발 상황 대비</td><td class="p-3 text-right text-slate-400">42,880원</td></tr>
+              <tr class="border-t-2 border-slate-300 font-bold">
+                <td class="p-3" colspan="2">합계 (예비비 포함)</td>
+                <td class="p-3 text-right text-lg text-green-600">428,800원</td>
+              </tr>
+              <tr>
+                <td class="p-3 text-xs text-slate-400" colspan="2">입력 예산 500,000원 대비</td>
+                <td class="p-3 text-right text-green-600 font-semibold">-71,200원 여유</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-3 rounded-lg bg-amber-50 border border-amber-200 p-3 text-sm text-amber-800">
+        <strong>절감 팁:</strong> 저녁 식사비(88,000원)는 작은아빠 포함 4인 기준입니다. 작은아빠가 별도 부담하면 실질 지출은 약 66,000원 절감 가능.
+        숙소를 이비스 동작(약 120,000원)으로 변경하면 추가 80,000~100,000원 절감됩니다.
+      </div>
+    </section>
+
+    <!-- ④ 준비 체크리스트 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-4">준비 체크리스트</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+
+        <div class="rounded-xl border border-slate-200 bg-white shadow-sm p-4">
+          <h3 class="font-semibold text-teal-700 mb-3">📋 예약 (선행 필수)</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span><strong>국립중앙박물관 어린이박물관</strong> — 방문 14일 전 00시 온라인 예약 오픈. 당일 현장 불가</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span><strong>서울상상나라</strong> — 주말이라면 최소 1주일 전 홈페이지 예약</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span><strong>담양에초대 개별룸</strong> — 3~4일 전 전화 예약. "아기의자·유아 동반" 명시</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span><strong>숙소</strong> — 온돌룸 또는 침대 가드 가능 여부 사전 확인</span></li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-white shadow-sm p-4">
+          <h3 class="font-semibold text-teal-700 mb-3">🎒 출발 전 준비</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>가족관계증명서 출력 (서울상상나라 36개월 미만 무료 증빙용)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>아기 물티슈, 기저귀 (여분 포함), 여벌옷 2벌</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>아기 간식 (이동 중 달래기용), 물병</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>유모차 (상상나라·박물관 모두 유모차 접근 가능)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>카카오T 앱 설치 (택시 4회 사용 예정)</span></li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-white shadow-sm p-4">
+          <h3 class="font-semibold text-teal-700 mb-3">📍 현지 체크</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>숙소 체크인 시간 확인 (짐 사전 보관 가능 여부)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>서울상상나라 예약 회차 시간 재확인</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>저녁 식당 예약 재확인 연락 (당일 오전)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 accent-teal-600"><span>귀가 심야 할증 피하기 — 22시 이전 택시 탑승</span></li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-white shadow-sm p-4">
+          <h3 class="font-semibold text-amber-600 mb-3">⚠️ 대안 플랜</h3>
+          <ul class="space-y-2 text-sm text-slate-600">
+            <li>🌧 <strong>우천 시</strong>: 어린이대공원 산책 생략 → 실내 카페 휴식</li>
+            <li>😴 <strong>아기 컨디션 이상</strong>: 일정 단축, 숙소 조기 귀환</li>
+            <li>🎟 <strong>상상나라 예약 마감</strong>: 1일차↔2일차 관광지 순서 교체</li>
+            <li>🍽 <strong>담양에초대 예약 불가</strong>: 사당역 개별룸 식당 (다이닝코드 검색 37개 옵션)</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="text-center text-xs text-slate-400 pt-4 border-t border-slate-200">
+      여행 계획 하네스 v2 · 생성일 2026-05-31 · run-20260531-seoul-v3
+    </footer>
+
+  </main>
+
+  <script>
+    function showTab(tabId) {
+      document.getElementById('tab1').classList.add('hidden');
+      document.getElementById('tab2').classList.add('hidden');
+      document.getElementById('tab1-btn').classList.remove('tab-active');
+      document.getElementById('tab2-btn').classList.remove('tab-active');
+      document.getElementById('tab1-btn').classList.add('text-slate-400');
+      document.getElementById('tab2-btn').classList.add('text-slate-400');
+
+      document.getElementById(tabId).classList.remove('hidden');
+      document.getElementById(tabId + '-btn').classList.add('tab-active');
+      document.getElementById(tabId + '-btn').classList.remove('text-slate-400');
+    }
+  </script>
+
+</body>
+</html>

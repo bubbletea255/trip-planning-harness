@@ -31,9 +31,9 @@ artifacts/
 `run-YYYYMMDD-{목적지약어}`
 
 예시:
-- `run-20260531-tokyo` (도쿄 여행, 단일 모드)
-- `run-20260531-paris-claude` (파리 여행, 비교 모드 Claude 결과)
-- `run-20260531-paris-codex` (파리 여행, 비교 모드 Codex 결과)
+- `run-20260531-seoul` (서울 여행, 단일 모드)
+- `run-20260531-tokyo-claude` (도쿄 여행, 비교 모드 Claude 결과)
+- `run-20260531-tokyo-codex` (도쿄 여행, 비교 모드 Codex 결과)
 
 ---
 
@@ -69,4 +69,7 @@ comparison-{run-id}.md  ← 사용자가 최종안 선택
 
 | run-id | 목적지 | 날짜 | 모드 | 상태 |
 |---|---|---|---|---|
-| run-20260531-seoul | 서울 | 2026-05-31 | 단일 (Claude Code) | ✓ 완료 |
+| run-20260531-seoul | 서울 | 2026-05-31 | 단일 (Claude Code) | ✓ 완료 (v1) |
+| run-20260531-seoul-v2 | 서울 | 2026-05-31 | 단일 (Codex) | ✓ 완료 (v1) |
+| run-20260531-seoul-v3 | 서울 | 2026-05-31 | 단일 (Claude Code) | ✓ 완료 (v2 구조 검증) |
+| run-20260531-seoul-v4 | 서울 | 2026-05-31 | 단일 (Codex) | ✓ 완료 (가족 여행 기본안) |
