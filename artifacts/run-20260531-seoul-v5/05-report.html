@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서울 여행 계획 — 1박 2일</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-slate-900">
+  <main class="mx-auto max-w-4xl px-4 py-8 space-y-8">
+
+    <!-- 1. 여행 개요 카드 -->
+    <section>
+      <h1 class="text-2xl font-bold mb-4">🗺️ 서울 여행 계획</h1>
+      <div class="bg-white rounded-2xl shadow p-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div class="text-center">
+          <p class="text-xs text-slate-500 mb-1">목적지</p>
+          <p class="font-semibold">서울</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-slate-500 mb-1">기간</p>
+          <p class="font-semibold">1박 2일</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-slate-500 mb-1">인원</p>
+          <p class="font-semibold">혼자 (1명)</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-slate-500 mb-1">예산 상태</p>
+          <p class="font-semibold text-green-600">300,000원 중 173,000원 사용 (여유)</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-4 mt-3 flex flex-wrap gap-2 text-sm">
+        <span class="bg-amber-100 text-amber-800 rounded-full px-3 py-1">맛집</span>
+        <span class="bg-amber-100 text-amber-800 rounded-full px-3 py-1">문화유적</span>
+        <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1">대중교통</span>
+        <span class="bg-slate-100 text-slate-700 rounded-full px-3 py-1">일정 강도: 보통</span>
+      </div>
+    </section>
+
+    <!-- 2. 날짜별 일정 -->
+    <section>
+      <h2 class="text-xl font-bold mb-4">📅 날짜별 일정</h2>
+
+      <!-- Day 1 -->
+      <div class="bg-white rounded-2xl shadow p-6 mb-4">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</span>
+          <h3 class="font-bold text-lg">1일차 — 역사 골목 + 야식 거리</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-stone-100">
+                <th class="text-left p-2 rounded-tl-lg">시간</th>
+                <th class="text-left p-2">활동</th>
+                <th class="text-left p-2">장소</th>
+                <th class="text-left p-2">소요</th>
+                <th class="text-left p-2 rounded-tr-lg">비고</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-100">
+              <tr>
+                <td class="p-2 text-slate-500">10:00</td>
+                <td class="p-2">체크인 / 짐 보관</td>
+                <td class="p-2">숙소 (인사동)</td>
+                <td class="p-2">30분</td>
+                <td class="p-2 text-xs text-slate-500">얼리 체크인 불가 시 짐만 보관</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">10:30</td>
+                <td class="p-2">경복궁 관람</td>
+                <td class="p-2">경복궁</td>
+                <td class="p-2">1시간 30분</td>
+                <td class="p-2 text-xs text-slate-500">입장료 3,000원 / 한복 착용 무료</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">12:00</td>
+                <td class="p-2">북촌 한옥마을 산책</td>
+                <td class="p-2">북촌</td>
+                <td class="p-2">1시간</td>
+                <td class="p-2 text-xs text-slate-500">도보 15분, 무료</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">13:15</td>
+                <td class="p-2">점심 — 시장 먹거리</td>
+                <td class="p-2">광장시장</td>
+                <td class="p-2">1시간 30분</td>
+                <td class="p-2 text-xs text-slate-500">빈대떡·마약김밥 6,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">15:00</td>
+                <td class="p-2">인사동 산책·쇼핑</td>
+                <td class="p-2">인사동</td>
+                <td class="p-2">1시간</td>
+                <td class="p-2 text-xs text-slate-500">전통 공예품·카페</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">16:30</td>
+                <td class="p-2">체크인 · 휴식</td>
+                <td class="p-2">숙소</td>
+                <td class="p-2">1시간</td>
+                <td class="p-2 text-xs text-slate-500"></td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">18:00</td>
+                <td class="p-2">저녁 — 레트로 야식</td>
+                <td class="p-2">을지로 노가리 골목</td>
+                <td class="p-2">1시간 30분</td>
+                <td class="p-2 text-xs text-slate-500">맥주+노가리 17,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">20:00</td>
+                <td class="p-2">을지로 야경 산책</td>
+                <td class="p-2">을지로 일대</td>
+                <td class="p-2">30분</td>
+                <td class="p-2 text-xs text-slate-500">무료</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">20:30</td>
+                <td class="p-2">숙소 귀환</td>
+                <td class="p-2">숙소</td>
+                <td class="p-2">—</td>
+                <td class="p-2 text-xs text-slate-500">지하철 10분</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">이동 시간 합계: 약 1시간 35분</p>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="bg-white rounded-2xl shadow p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</span>
+          <h3 class="font-bold text-lg">2일차 — 전통 시장 아침 + 성수동 트렌드</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-stone-100">
+                <th class="text-left p-2 rounded-tl-lg">시간</th>
+                <th class="text-left p-2">활동</th>
+                <th class="text-left p-2">장소</th>
+                <th class="text-left p-2">소요</th>
+                <th class="text-left p-2 rounded-tr-lg">비고</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-100">
+              <tr>
+                <td class="p-2 text-slate-500">08:30</td>
+                <td class="p-2">아침 — 도시락카페</td>
+                <td class="p-2">통인시장</td>
+                <td class="p-2">1시간</td>
+                <td class="p-2 text-xs text-slate-500">엽전 도시락 5,000원, 현금 필요</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">09:30</td>
+                <td class="p-2">체크아웃</td>
+                <td class="p-2">숙소</td>
+                <td class="p-2">30분</td>
+                <td class="p-2 text-xs text-slate-500">짐 보관 가능 여부 확인</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">10:30</td>
+                <td class="p-2">성수동 카페·식당 탐방</td>
+                <td class="p-2">성수동 카페거리</td>
+                <td class="p-2">2시간</td>
+                <td class="p-2 text-xs text-slate-500">오픈런 권장 (11:30 전)</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">12:30</td>
+                <td class="p-2">점심 — 트렌디 식당</td>
+                <td class="p-2">성수동 (어니언 등)</td>
+                <td class="p-2">1시간</td>
+                <td class="p-2 text-xs text-slate-500">13,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">14:00</td>
+                <td class="p-2">귀환 이동</td>
+                <td class="p-2">—</td>
+                <td class="p-2">—</td>
+                <td class="p-2 text-xs text-slate-500">지하철 30분</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">이동 시간 합계: 약 1시간 30분</p>
+      </div>
+
+      <!-- 대안 일정 -->
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 mt-4 text-sm">
+        <p class="font-semibold mb-2">🔄 대안 일정</p>
+        <ul class="space-y-1 text-slate-700">
+          <li>• <strong>우천 시</strong>: 경복궁 대신 국립민속박물관(경복궁 내, 무료) 또는 국립중앙박물관(이촌역, 무료)</li>
+          <li>• <strong>경복궁 화요일 휴무 시</strong>: 창덕궁(안국역, 3,000원)으로 대체 — 후원 투어 옵션 있음</li>
+          <li>• <strong>을지로 웨이팅 길 경우</strong>: 인근 을밀대 냉면 또는 진고개 삼겹살로 대체</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 예산 테이블 -->
+    <section>
+      <h2 class="text-xl font-bold mb-4">💰 예산 분석</h2>
+      <div class="bg-white rounded-2xl shadow p-6">
+        <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+          <div class="bg-stone-50 rounded-xl p-3">
+            <p class="text-xs text-slate-500 mb-1">입력 예산</p>
+            <p class="font-bold text-lg">300,000원</p>
+          </div>
+          <div class="bg-stone-50 rounded-xl p-3">
+            <p class="text-xs text-slate-500 mb-1">추정 지출</p>
+            <p class="font-bold text-lg">173,000원</p>
+          </div>
+          <div class="bg-green-50 rounded-xl p-3">
+            <p class="text-xs text-slate-500 mb-1">예산 여유</p>
+            <p class="font-bold text-lg text-green-600">-127,000원</p>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-stone-100">
+                <th class="text-left p-2 rounded-tl-lg">카테고리</th>
+                <th class="text-left p-2">항목</th>
+                <th class="text-right p-2">단가</th>
+                <th class="text-right p-2">수량</th>
+                <th class="text-right p-2 rounded-tr-lg">소계</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-100">
+              <tr>
+                <td class="p-2 text-slate-500">항공</td>
+                <td class="p-2">해당 없음</td>
+                <td class="p-2 text-right">—</td>
+                <td class="p-2 text-right">—</td>
+                <td class="p-2 text-right">0원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">숙박</td>
+                <td class="p-2">인사동 게스트하우스</td>
+                <td class="p-2 text-right">40,000원</td>
+                <td class="p-2 text-right">1박</td>
+                <td class="p-2 text-right">40,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500" rowspan="4">식사</td>
+                <td class="p-2">광장시장 (Day 1 점심)</td>
+                <td class="p-2 text-right">6,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">6,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2">을지로 노가리 (Day 1 저녁)</td>
+                <td class="p-2 text-right">17,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">17,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2">통인시장 도시락 (Day 2 아침)</td>
+                <td class="p-2 text-right">5,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">5,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2">성수동 점심 (Day 2 점심)</td>
+                <td class="p-2 text-right">13,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">13,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">교통</td>
+                <td class="p-2">지하철·버스 (약 10회)</td>
+                <td class="p-2 text-right">1,400원</td>
+                <td class="p-2 text-right">10회</td>
+                <td class="p-2 text-right">14,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500">관광</td>
+                <td class="p-2">경복궁 입장료</td>
+                <td class="p-2 text-right">3,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">3,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-slate-500" rowspan="3">기타</td>
+                <td class="p-2">카페·음료 (인사동)</td>
+                <td class="p-2 text-right">6,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">6,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2">소액 기념품·잡비</td>
+                <td class="p-2 text-right">30,000원</td>
+                <td class="p-2 text-right">1</td>
+                <td class="p-2 text-right">30,000원</td>
+              </tr>
+              <tr>
+                <td class="p-2 font-medium">예비비 (10%)</td>
+                <td class="p-2 text-right">—</td>
+                <td class="p-2 text-right">—</td>
+                <td class="p-2 text-right font-medium">15,700원</td>
+              </tr>
+              <tr class="bg-stone-50 font-bold">
+                <td class="p-2 rounded-bl-lg" colspan="4">합계</td>
+                <td class="p-2 text-right text-green-600 rounded-br-lg">157,700원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3">* 예비비 포함 총 지출 추정: 약 173,000원 | 잔여 예산: 127,000원</p>
+      </div>
+    </section>
+
+    <!-- 4. 준비 체크리스트 -->
+    <section>
+      <h2 class="text-xl font-bold mb-4">✅ 준비 체크리스트</h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+        <div class="bg-white rounded-2xl shadow p-5">
+          <h3 class="font-semibold mb-3 text-amber-700">출발 전</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>숙소 예약 확인 (인사동 게스트하우스)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>T-money 카드 잔액 확인 (14,000원 이상)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>현금 준비 (50,000원 — 시장·을지로 현금 선호)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>날씨 확인 (우천 시 대안 일정 숙지)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>경복궁 화요일 여부 확인 (화 휴무)</span></li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-5">
+          <h3 class="font-semibold mb-3 text-amber-700">현지</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>숙소 체크인 시간 확인 (얼리 체크인 시 짐 보관)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>통인시장 도시락카페 — 현금(엽전 구매) 준비</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>성수동 식당 오픈런 (11:30 이전 도착)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>체크아웃 전 짐 보관 가능 여부 확인</span></li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow p-5">
+          <h3 class="font-semibold mb-3 text-amber-700">귀환 후</h3>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>지출 정산 (예산 157,700원 대비 실지출 확인)</span></li>
+            <li class="flex items-start gap-2"><input type="checkbox" class="mt-0.5 shrink-0"><span>여행 메모·사진 정리</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="text-center text-xs text-slate-400 pt-4 pb-2">
+      생성: 여행 계획 하네스 v3 · run-20260531-seoul-v5
+    </footer>
+
+  </main>
+</body>
+</html>

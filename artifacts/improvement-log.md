@@ -1,7 +1,7 @@
 # 개선 기록 (Improvement Log)
 
 하네스 실행 후 발견된 문제, 사용자 피드백, 개선 내용을 기록한다.
-이 기록을 바탕으로 `agents/`, `skills/` 파일을 개선한다.
+이 기록을 바탕으로 `harness/` 공통 원장과 플랫폼별 어댑터를 개선한다.
 
 ---
 
@@ -35,6 +35,58 @@
 | 날짜 | run-id | 유형 | 요약 |
 |---|---|---|---|
 | 2026-05-31 | — | 초기 구성 | 하네스 최초 구성 완료 |
+| 2026-05-31 | — | Codex 어댑터 | 3차 작업: .agents/skills orchestrator+6개 및 .codex/config.toml 추가 |
+| 2026-06-01 | — | 정합성 패치 | v3.2: Claude/Codex 결과 차이를 줄이기 위해 예비비·Intake·웹 조사·숙박비 기준 통일 및 Codex Skill 한국어화 |
+
+---
+
+## 2026-06-01 | — | v3.2 Claude/Codex 정합성 패치
+
+**발견된 문제**:
+- Claude 어댑터는 예비비를 추정 실지출의 10%로 계산하라고 했고, 공통 원장은 입력 예산의 10%로 정의했다.
+- Intake에서 필수 항목을 끝까지 요구하는 규칙과 3회 재질문 후 가정 처리하는 규칙이 함께 존재했다.
+- Codex Skill description과 본문이 영어 중심이라 한국어 요청에서 자동 선택성이 약할 수 있었다.
+- 웹 조사 강도가 Claude와 Codex 사이에서 다르게 읽힐 수 있었다.
+- 숙박비 계산에서 객실 단가와 1인 단가를 구분하는 기준이 부족했다.
+
+**원인**:
+- 공통 원장과 플랫폼 어댑터 사이에 일부 업무 기준이 중복 작성되면서 drift가 생겼다.
+
+**적용한 개선**:
+- 예비비를 입력 예산의 10%로 통일했다.
+- 목적지·기간은 실행 필수, 예산·인원·관심사는 수집 우선 및 명시적 가정 가능으로 정리했다.
+- 변동 정보는 가능한 경우 웹 조사로 확인하고 실패 시 "확인 필요"로 분리하도록 공통 researcher 기준을 강화했다.
+- 숙박비는 객실 단가, 1인 단가, 추가 인원 요금, 확인 필요를 구분하도록 budget 기준을 보완했다.
+- Codex Skill 7개를 한국어 중심으로 정리했다.
+
+**변경된 파일**:
+- `harness/ORCHESTRATOR.md`
+- `harness/contracts/intake.contract.md`
+- `harness/contracts/researcher.contract.md`
+- `harness/contracts/budget-analyst.contract.md`
+- `harness/procedures/intake.md`
+- `harness/procedures/researcher.md`
+- `harness/procedures/budget-analyst.md`
+- `harness/schemas/intake-questionnaire.schema.md`
+- `harness/schemas/budget.schema.md`
+- `.claude/agents/trip-budget-analyst.md`
+- `.agents/skills/*/SKILL.md`
+
+---
+
+## 2026-05-31 | run-20260531-seoul-v5 | v3 구조 스모크 테스트
+
+**여행 조건**: 서울 1박 2일, 혼자 (1명), 예산 300,000원, 관심사: 맛집·문화유적
+**실행 모드**: Claude Code 단일 (v3 harness/ 구조 첫 실행)
+**결과**: 추정 총액 173,000원 (예비비 포함), 여유 127,000원. 5개 산출물 생성 완료.
+**v3 구조 검증 항목**:
+- contracts/ 6개 파일: Phase별 목적·기준 분리 정상 작동
+- procedures/ 6개 파일: 절차 단계 명확, 이동시간 8시간 이하 조건 충족
+- schemas/ 7개 파일: 모든 출력 형식 정상 적용
+- ORCHESTRATOR.md 경로 참조: harness/contracts/, harness/procedures/ 모두 정상
+- Budget Analyst 역산 금지 규칙 유지됨 (173,000원 = 실제 추정값)
+- Report Composer: TailwindCSS CDN만 사용, 4섹션(개요·일정·예산·체크리스트) 완비
+**결론**: v3 구조 정상 동작 확인. 2차 작업(Claude 어댑터 .claude/agents/ 구성) 진행 가능.
 
 ---
 

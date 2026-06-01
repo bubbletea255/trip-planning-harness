@@ -1,0 +1,10 @@
+# Trip planning harness project-local Codex config.
+#
+# This file intentionally does not override model, reasoning effort, sandbox,
+# approval policy, plugins, or MCP servers. Those runtime choices should come
+# from the user's global Codex config unless this project later needs a specific
+# local override.
+#
+# Codex adapter instructions for this repository live in:
+# - AGENTS.md
+# - .agents/skills/*/SKILL.md
